@@ -1,0 +1,23 @@
+.caixa-alta {
+  text-transform: uppercase;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 0px;
+}
+
+.nav-bar-car {
+}
+
+.nav-bar-title {
+}

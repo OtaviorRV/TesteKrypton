@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/Style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+
+<body>
+  <div class="container ">
+    <div class="nav-bar">
+      <div class="nav-bar-title">
+        <h3> Teste Krypton</h3>
+      </div>
+      <div class="nav-bar-car">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#adicionarCarro">
+          Novo Carro
+        </button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 grid" id="cartao"></div>
+    </div>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="adicionarCarro" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Novo Carro e Motor</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="formCarro" enctype="multipart/form-data" method="POST" class="needs-validation" novalidate>
+            <div class="row">
+              <h5 class="col-md-12">Carro</h5>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6 mb-6">
+                <label for="marca">Marca</label>
+                <input type="text" class="form-control" id="marca" placeholder="Marca" required>
+              </div>
+              <div class="form-group col-md-6 mb-6">
+                <label for="modelo">Modelo</label>
+                <input type="text" class="form-control" id="modelo" placeholder="Modelo" required>
+              </div>
+              <div class="form-group col-md-12 mb-12">
+                <label for=" cor">Cor</label>
+                <input type="text" class="form-control" id="cor" placeholder="Cor" required>
+              </div>
+            </div>
+            <div class="row">
+              <h5 class="col-md-12">Motor</h5>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12 mb-12">
+                <label for="litragem">Litragem</label>
+                <div class="input-group">
+                  <input type="number" class="form-control" id="litragem" placeholder="Litragem" aria-describedby="inputGroupPrepend" required>
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="posicionamento_cilindros">Posicionamento Cilindros</label>
+                <select id="posicionamento_cilindros" class="form-control">
+                  <option value="linha" selected>Linha</option>
+                  <option value="V">V</option>
+                </select>
+              </div>
+              <div class="form-group col-md-6 mb-6">
+                <label for="cilindros">Cilindros</label>
+                <input type="number" class="form-control" id="cilindros" placeholder="Cilindros" required>
+              </div>
+              <div class="form-group col-md-12 mb-12">
+                <label for="observacao">Observações</label>
+                <textarea id="observacao" class="form-control" placeholder="Digite as suas Observações."></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class=" modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-primary" onclick="NovoCarroListado()" data-dismiss="modal">Salvar </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/Script.js"></script>
+
+</html>
